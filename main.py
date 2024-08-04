@@ -25,7 +25,8 @@ def getoptions():
                         dest="seed", default=random.random(), metavar="", type=int)
     parser.add_argument("--mode", choices=["normal", "reckless", "goldhunt"],
                         default="normal", dest="mode", help="Game mode")
-
+    parser.add_argument("--rompath", action="store", help="location of vanilla Solar Jetman rom",
+                        default="Vanilla.nes", dest="rompath" )
     return parser.parse_args()
 
 
@@ -34,8 +35,7 @@ if __name__ == "__main__":
 
     if options.Ritems_no and options.Ritems:
         raise BaseException("Item randomizer can't do both logic & no logic (flags i & I)")
-
-    with open("Vanilla.nes", "rb") as original:
+    with open(options.rompath, "rb") as original:
         randogame = Rando(original.read())
         randogame.seed = str(options.seed)[2:] if options.seed < 1 else options.seed
 
