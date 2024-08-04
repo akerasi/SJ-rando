@@ -1,1 +1,1 @@
-import main
+from sj-rando import main
