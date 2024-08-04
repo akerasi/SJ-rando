@@ -3,7 +3,7 @@
 
     You will need a version of the game. I cannot help you on this.
 
-    Current version : Version 0.1.1
+    Current version : Version 0.1.2
     Wrote by Niamek originally, current maintainer is akerasi
 
     Discord channel : https://discord.gg/HNDEnvz
