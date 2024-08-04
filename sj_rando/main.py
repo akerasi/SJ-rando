@@ -29,7 +29,7 @@ def getoptions():
                         default="Vanilla.nes", dest="rompath" )
     return parser.parse_args()
 
-def runrando():
+def main():
     options = getoptions()
 
     if options.Ritems_no and options.Ritems:
@@ -60,4 +60,4 @@ def runrando():
         with open(f"Solar Jetman_{randogame.flags}_{randogame.mode}_{randogame.seed}.nes", "wb") as newrom:
             newrom.write(randogame.data)
 if __name__ == "__main__":
-    runrando()
+    main()
