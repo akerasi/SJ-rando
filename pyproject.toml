@@ -22,7 +22,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project.scripts]
-sj-rando = "sj_rando:main"
+sj-rando = "sj_rando:main.runrando"
 
 [tool.hatch.build.targets.sdist]
 include=[

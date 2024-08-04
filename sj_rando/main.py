@@ -29,8 +29,7 @@ def getoptions():
                         default="Vanilla.nes", dest="rompath" )
     return parser.parse_args()
 
-
-if __name__ == "__main__":
+def runrando():
     options = getoptions()
 
     if options.Ritems_no and options.Ritems:
@@ -60,3 +59,5 @@ if __name__ == "__main__":
 #########END of the randomizer program : Write the new file############
         with open(f"Solar Jetman_{randogame.flags}_{randogame.mode}_{randogame.seed}.nes", "wb") as newrom:
             newrom.write(randogame.data)
+if __name__ == "__main__":
+    runrando()
