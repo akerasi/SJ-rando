@@ -1,6 +1,6 @@
-from subrando import nescolors, getnewcolor, getdistributionaccel, getwarheadaccel
+from sj_rando.subrando import nescolors, getnewcolor, getdistributionaccel, getwarheadaccel
 import random
-from items import *
+from sj_rando.items import *
     # Thank to this items module, items have their correct value 
     # (fuel = 0xA for example) and I have 
     # 2 giant dicto with all items offsets and their 
