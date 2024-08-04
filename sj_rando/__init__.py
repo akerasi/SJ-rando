@@ -1,1 +1,1 @@
-from sj_rando import main
+from sj_rando.main import *
