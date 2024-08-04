@@ -3,28 +3,38 @@
 
     You will need a version of the game. I cannot help you on this.
 
-    Current version : Version 2
-    Wrote by Niamek.
+    Current version : Version 0.1.1
+    Wrote by Niamek originally, current maintainer is akerasi
 
     Discord channel : https://discord.gg/HNDEnvz
 
 
-# Files included:
+# Usage for end users:
+If you don't already have Python, get Python 3.8 or newer (testing is on 3.9.6 as that's what MiSTerFPGA runs and that's my target platform, but should work anywhere as it's simple pure python)
+install via pip (pip install sj-rando)
+once done, sj-rando is like any other executable. I haven't planned on adding a GUI or anything, but if there's call for one, glad to toss in a quick and dirty GUI version.
+
+sj-rando --help
+
+will tell you the command line options. This won't work without an original rom; default location is same location you're executing from with name Vanilla.nes but rompath is configurable via command line argument (as are any randomizer options, though the defaults are sane)
+
+# Files included in source distro:
 * .gitignore : You can delete this, it's for github and me.
 * README.md : infos about the randomizer, please read at least the Getting started section.
-* main.py : the one and only script to run. All the other scripts don't do anything interesting by themself.
-* randomizer.py : This file includes everything:
+* sj_rando/main.py : the one and only script to run. All the other scripts don't do anything interesting by themself.
+* sj_rando/randomizer.py : This file includes everything:
 ** The codes for changing the game (and thus everything relies on this file).
 ** some code that will change very specific stuffs. 
 ** Includes all randomizers of the program.
-* subrando.py : a module that containt fragments of codes needed for the randomizer.py file. Created to lighten the code of randomizer.py.
-* items.py : This contains informations used by randomizer.py. Don't delete this
+* sj_rando/subrando.py : a module that containt fragments of codes needed for the randomizer.py file. Created to lighten the code of randomizer.py.
+* sj_rando/items.py : This contains informations used by randomizer.py. Don't delete this
+* pyproject.toml : this is a file that defines how the project is built. End users can ignore it.
 
 * Any other files are dev files. You can delete them.
 ** assembly.txt : This is a file I made to better understand some portion of the game. It's really a mess, so read at your own risk. You can delete this: none of the scripts need this file.
 ** infos.py : This is a file I use to store infos I found. You can delete this as the randomizer don't use it.
 
-# Getting started:
+# Getting started for developers:
     You need to download Python 3.8.
         https://realpython.com/installing-python/
     Drag the game named Vanilla.nes in the same folder.
@@ -132,3 +142,4 @@
     Randomania discord channel for being a useful place to learn about randomizers.
     Randomizers communities : This randomizer is inspired by other randomizers' "structure".
     sbm : For helping in understanding upcodes
+    Niamek : for his initial versions
