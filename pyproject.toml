@@ -5,8 +5,8 @@ dependencies = [
 ]
 requires-python = ">=3.8"
 authors = [
-  {name = "Niamek"}
-  {name = "akerasi" email = "akerasi@gmail.com"}
+  {name = "Niamek"},
+  {name = "akerasi" email = "akerasi@gmail.com"},
 ]
 description = "A tool to randomize a Solar Jetman (NES) rom file."
 readme = "README.md"
